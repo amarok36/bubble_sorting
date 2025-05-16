@@ -3,7 +3,6 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        try {
             int[] nums = new int[12];
 
             Random rnd = new Random();
@@ -15,9 +14,12 @@ public class Main {
             System.out.println("Инициализирован массив: ");
             display(nums);
 
+        try {
+            int[] sortedNums = sortArray(nums);
             System.out.println("\nПроизведена сортировка.");
+
             System.out.println("\nОтсортированный массив: ");
-            display(sortArray(nums));
+            display(sortedNums);
 
         } catch (Exception e) {
             System.err.println("Ошибка: " + e.getMessage());
